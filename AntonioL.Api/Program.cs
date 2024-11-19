@@ -155,12 +155,28 @@ builder.Services.Configure<FormOptions>(options =>
 
 var app = builder.Build();
 
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Configurar Swagger para producción
+//if (app.Environment.IsProduction())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI(options =>
+//    {
+//        options.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
+//        options.RoutePrefix = string.Empty; // Hace que Swagger sea la página por defecto
+//    });
+//}
+//else
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
+app.UseSwagger();
+app.UseSwaggerUI();
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
 //CORS
 //app.UseCors("CorsRule");

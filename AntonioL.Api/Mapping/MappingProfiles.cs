@@ -15,9 +15,10 @@ namespace AntonioL.Api.Mapping
         /// </summary>
         public MappingProfiles()
         {
-            
 
 
+            CreateMap<Pais, PaisDto>().ReverseMap();
+            CreateMap<Departamento, DepartamentoDto>().ReverseMap();
             CreateMap<Municipio, MunicipioDto>().ReverseMap();
             CreateMap<Usuario, UsuarioDto>().ReverseMap();
 

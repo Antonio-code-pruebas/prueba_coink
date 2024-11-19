@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 using NpgsqlTypes;
 using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AntonioL.Api.Controllers
 {
@@ -91,6 +92,60 @@ namespace AntonioL.Api.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Function para obtener usuarios por filtro
+        /// </summary>
+        /// <param name="filtro">puede enviar uno o todos los valores, deje vacio ("") o en 0 los que no enviará a filtrar</param>
+        /// <returns></returns>
+        [HttpPost("obtenerUsuarios")]
+        public async Task<IActionResult> ObtenerUsuarios_func(FiltroUsuarios filtro)
+        {
+            try
+            {
+                // Crear el parámetro para la función
+                var parameters = new List<NpgsqlParameter>
+                {
+                    // Para 'nombre' y 'telefono', asignamos DBNull.Value si son cadenas vacías
+                    new NpgsqlParameter("_nombre", NpgsqlDbType.Text)
+                    {
+                        Value = string.IsNullOrEmpty(filtro.Nombre) ? DBNull.Value : (object)filtro.Nombre
+                    },
+                    new NpgsqlParameter("_telefono", NpgsqlDbType.Text)
+                    {
+                        Value = string.IsNullOrEmpty(filtro.Telefono) ? DBNull.Value : (object)filtro.Telefono
+                    },
+                    // Para los valores enteros, asignamos DBNull.Value si son 0
+                    new NpgsqlParameter("_pais_id", NpgsqlDbType.Integer)
+                    {
+                        Value = filtro.PaisId == 0 ? DBNull.Value : (object)filtro.PaisId
+                    },
+                    new NpgsqlParameter("_departamento_id", NpgsqlDbType.Integer)
+                    {
+                        Value = filtro.DepartamentoId == 0 ? DBNull.Value : (object)filtro.DepartamentoId
+                    },
+                    new NpgsqlParameter("_municipio_id", NpgsqlDbType.Integer)
+                    {
+                        Value = filtro.MunicipioId == 0 ? DBNull.Value : (object)filtro.MunicipioId
+                    }
+                };
+
+                // Llamar a la función usando el UnitOfWork
+                var municipios = await _unitOfWork.Repository<ResponseFiltroUsuarios>()
+                    .ExecuteFunctionAsync<ResponseFiltroUsuarios>("prueba_coink.filtrar_usuarios", parameters.ToArray());
+
+                if (municipios == null || municipios.Count == 0)
+                    return NotFound("No se encontraron usuarios.");
+
+                return Ok(municipios);
+            }
+            catch (Exception ex)
+            {
+                // Manejar excepciones y devolver una respuesta de error
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    $"Error al obtener los usuarios: {ex.Message}");
             }
         }
     }

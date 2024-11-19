@@ -104,12 +104,6 @@ namespace AntonioL.Logic.Logic
             _context.Set<T>().Remove(Entity);
         }
 
-        //public async Task<int> RemoveRange(IEnumerable<T> entities)
-        //{
-        //    _context.Set<T>().RemoveRange(entities);
-        //    return await _context.SaveChangesAsync();
-        //}
-
         public void RemoveRange(IEnumerable<T> entities)
         {
             _context.Set<T>().RemoveRange(entities);
