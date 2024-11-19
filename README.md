@@ -23,6 +23,6 @@ Postgresql V 16
 creada y administrada en GCP
 se necesita autorización para conectar desde una ip diferente
 
-#Funcionamiento
+# Funcionamiento
 
 
