@@ -22,6 +22,7 @@ Inyeccion de dependencias
 Postgresql V 16
 creada y administrada en GCP
 se necesita autorización para conectar desde una ip diferente
+![image](https://github.com/user-attachments/assets/3f7817bc-d95c-4cf4-afd2-dc167ee47830)
 
 # Funcionamiento
 
