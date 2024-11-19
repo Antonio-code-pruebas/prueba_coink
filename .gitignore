@@ -1,0 +1,52 @@
+## Windows ##
+###################
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files (64-bit)
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files (32-bit)
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files (64-bit)
+*.cab
+*.msi
+*.msm
+*.msp
+
+## .NET Core ##
+###################
+# Build Folders (Bin/Obj)
+bin/
+obj/
+
+# User-specific files
+.idea/
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# .NET Core Debugging
+.vs2019/
+.vs2019/*
+
+# Logs
+*.log
+

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{DA02CE1B-299A-44BA-9836-D3B3DD181028}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{802AC642-D2E6-4151-B08B-2586CFF5691A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{8EFE4040-0E4E-433F-A229-453A2465D2A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Share", "Share", "{6677C5A4-E25F-449C-A538-05A0636C062D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntonioL.Api", "AntonioL.Api\AntonioL.Api.csproj", "{2603701C-B4E6-4520-A934-7DCCCD86C2ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntonioL.Share", "AntonioL.Share\AntonioL.Share.csproj", "{E1A09ECE-F58B-4099-938F-82B303C096EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntonioL.Models", "AntonioL.Model\AntonioL.Models.csproj", "{32FA8D77-6856-4C72-A139-BFBBEE15E290}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntonioL.Logic", "AntonioL.Logic\AntonioL.Logic.csproj", "{93721B0F-C82A-4B32-93FD-501EB22E3E3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2603701C-B4E6-4520-A934-7DCCCD86C2ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2603701C-B4E6-4520-A934-7DCCCD86C2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2603701C-B4E6-4520-A934-7DCCCD86C2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2603701C-B4E6-4520-A934-7DCCCD86C2ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1A09ECE-F58B-4099-938F-82B303C096EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1A09ECE-F58B-4099-938F-82B303C096EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1A09ECE-F58B-4099-938F-82B303C096EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1A09ECE-F58B-4099-938F-82B303C096EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32FA8D77-6856-4C72-A139-BFBBEE15E290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FA8D77-6856-4C72-A139-BFBBEE15E290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FA8D77-6856-4C72-A139-BFBBEE15E290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FA8D77-6856-4C72-A139-BFBBEE15E290}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93721B0F-C82A-4B32-93FD-501EB22E3E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93721B0F-C82A-4B32-93FD-501EB22E3E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93721B0F-C82A-4B32-93FD-501EB22E3E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93721B0F-C82A-4B32-93FD-501EB22E3E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2603701C-B4E6-4520-A934-7DCCCD86C2ED} = {DA02CE1B-299A-44BA-9836-D3B3DD181028}
+		{E1A09ECE-F58B-4099-938F-82B303C096EC} = {6677C5A4-E25F-449C-A538-05A0636C062D}
+		{32FA8D77-6856-4C72-A139-BFBBEE15E290} = {8EFE4040-0E4E-433F-A229-453A2465D2A5}
+		{93721B0F-C82A-4B32-93FD-501EB22E3E3C} = {802AC642-D2E6-4151-B08B-2586CFF5691A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BD738CE-95CF-4C71-BC20-1BA425F011C1}
+	EndGlobalSection
+EndGlobal
